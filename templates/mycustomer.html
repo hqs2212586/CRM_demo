@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>我的客户</h3>
+<ul>
+    {% for customer_distribute in customer_distribute_list %}
+        <li>
+            {# 一个客户有多种分布状态 #}
+            {{ customer_distribute.customer }}--{{ customer_distribute.date }}--{{ customer_distribute.get_status_display }}
+        </li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>
